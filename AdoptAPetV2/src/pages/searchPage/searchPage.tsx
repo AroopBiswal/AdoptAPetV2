@@ -6,6 +6,8 @@ import ReactDOM from "react-dom/client";
 
 import "./searchPage.css";
 import { search } from "../../scripts/apiCalls";
+import noImageFound from "../../../public/images/noImageFound.jpeg";
+
 
 interface Animal {
   id: number;
@@ -97,11 +99,7 @@ export default function SearchPage(props: any) {
               <div className="petPhoto">
                 {" "}
                 <img
-                  src={
-                    !pet.photos[0]
-                      ? "../../../public/images/noImageFound.jpeg"
-                      : pet.photos[0].medium
-                  }
+                  src={!pet.photos[0] ? noImageFound : pet.photos[0].medium}
                   alt="no image found"
                 />{" "}
               </div>
