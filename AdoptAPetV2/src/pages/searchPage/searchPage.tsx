@@ -32,8 +32,8 @@ export default function SearchPage(props: any) {
   }, []);
 
   console.log("SearchPage constructor called");
-  const [type, setType] = useState("");
-  const [size, setSize] = useState("");
+//   const [type, setType] = useState("");
+//   const [size, setSize] = useState("");
   const [searchResults, setSearchResults] = useState<Animal[]>([]);
   const [savedPets, setSavedPets] = useState([]);
   const [typeValue, setTypeValue] = useState("");
@@ -41,6 +41,7 @@ export default function SearchPage(props: any) {
 
   const updateType = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setTypeValue(event.target.value);
+    console.log("Type value: " + typeValue)
   }, []);
 
   const updateSize = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,10 +51,10 @@ export default function SearchPage(props: any) {
   const handleSearch = useCallback(() => {
     let BearerToken = localStorage.getItem("BearerToken") || "";;
     console.log("Search button clicked");
-    setType(typeValue);
-    setSize(sizeValue);
-    console.log("ABC" + type  + size  + BearerToken.toString());
-    search( type , size ).then((response) => {
+    setTypeValue(typeValue);
+    setSizeValue(sizeValue);
+    console.log("ABC" + typeValue  + sizeValue  + BearerToken.toString());
+    search(typeValue, sizeValue).then((response) => {
       if (response.animals == null) {
         alert("Oops!, Invalid Input");
       } else {
@@ -61,7 +62,7 @@ export default function SearchPage(props: any) {
         setSearchResults(response.animals);
       }
     });
-  }, [type, size]);
+  }, [typeValue, sizeValue]);
 
   console.log("Search results: ");
   console.log({ searchResults });

@@ -21,6 +21,7 @@ export async function getBearerToken() {
 
 export async function search(type: any, size: any) {
   let bearerToken = localStorage.getItem("BearerToken");
+  console.log("ty --> " + type);
   const response = await fetch(
     `https://api.petfinder.com/v2/animals?type=${type}&size=${size}`,
     {
