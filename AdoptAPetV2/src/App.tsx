@@ -35,7 +35,7 @@ function App() {
       console.log("BEARER" + localStorage.getItem("BearerToken"));
       setBearerSet(true);
     }
-  });
+  }, []);
 
   return (
     <div className="App">
