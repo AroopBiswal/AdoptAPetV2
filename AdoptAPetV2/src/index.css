@@ -5,7 +5,12 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+  background: radial-gradient(
+    circle farthest-corner at right center,
+    #84cfb9 12%,
+    #0a59cf 100%
+  );
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +31,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  place-items: top;
   min-width: 320px;
   min-height: 100vh;
 }

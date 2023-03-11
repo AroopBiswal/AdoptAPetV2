@@ -1,0 +1,32 @@
+.nav {
+  margin: auto;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background-color: transparent;
+  justify-content: space-around;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navItem {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  height: auto;
+  margin-bottom: auto;
+  margin-top: 0;
+  padding: 1vw;
+  position: relative;
+  display: inline-block;
+}
+
+.navItem:hover {
+  color: #0a59cf;
+  background-color: aqua;
+  border-radius: 5px;
+  transition: 0.5s;
+}

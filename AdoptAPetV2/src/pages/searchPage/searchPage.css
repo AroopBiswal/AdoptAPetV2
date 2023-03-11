@@ -1,0 +1,94 @@
+.searchTitle {
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.searchInput {
+    width: 50vw;
+    height: 3vh;
+    margin: 2vh;
+    border-radius: 5px;
+    border: none;
+    padding: 2vw;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.searchArea {
+    width: 100%;
+    height: 100%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchButton {
+    background-color: white; /* Green */
+    color: purple;
+    padding: 12px 20px;
+    width: 10vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+  }
+  
+  .searchButton:hover {
+    background-color: #5d32e9;
+    transition-duration: 0.5s;
+    color:white;
+  }
+
+  .petDisplayArea {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: white;
+  }
+
+  .petDisplayCard {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 2vh;
+  }
+
+  .petName {
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(255, 255, 112);
+    font-weight: bold;
+  }
+
+  .petPhoto {
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+  }
+
+  .petContact {
+    font-size: 1em;
+    text-align: center;
+    color: rgb(193, 5, 5);
+    font-weight: bold;
+  }
