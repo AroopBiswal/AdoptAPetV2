@@ -46,10 +46,12 @@ export default function SearchPage(props: any) {
   }, []);
 
   const handleSearch = useCallback(() => {
-    let BearerToken = localStorage.getItem("BearerToken");
-    console.log("ABC" + { type } + { size } + { BearerToken });
+    let BearerToken = localStorage.getItem("BearerToken") || "";;
     console.log("Search button clicked");
-    search({ type }, { size }).then((response) => {
+    setType(typeValue);
+    setSize(sizeValue);
+    console.log("ABC" + type  + size  + BearerToken.toString());
+    search( type , size ).then((response) => {
       if (response.animals == null) {
         alert("Oops!, Invalid Input");
       } else {

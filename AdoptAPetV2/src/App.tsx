@@ -10,26 +10,29 @@ import HomePage from "./pages/homePage/homePage";
 import SearchPage from "./pages/searchPage/searchPage";
 import { getBearerToken, search } from "./scripts/apiCalls";
 
+
 function App() {
   const [count, setCount] = useState(0);
   const [bearerSet, setBearerSet] = useState(false);
   const [bearerToken, setBearerToken] = useState("");
 
   const fetchBearerToken = async () => {
+    console.log("Fetching bearer token")
     const bearer = await getBearerToken();
     console.log(bearer);
     setBearerToken(bearer);
     localStorage.setItem("BearerToken", bearer);
     console.log("Bearer token set in local storage");
-    // console.log("Bearer token fetched");
-    // console.log(bearer);
+    console.log("Bearer token fetched");
+    console.log(bearer);
   };
 
   useEffect(() => {
+    console.log("API Key --> " + import.meta.env.VITE_API_KEY);
     if (!bearerSet) {
       fetchBearerToken();
 
-      console.log(localStorage.getItem("BearerToken"));
+      console.log("BEARER" + localStorage.getItem("BearerToken"));
       setBearerSet(true);
     }
   });

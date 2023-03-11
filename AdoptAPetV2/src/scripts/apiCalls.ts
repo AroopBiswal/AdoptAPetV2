@@ -4,8 +4,9 @@ import { useState } from "react";
 
 
 export async function getBearerToken() {
+    console.log("API Key --> " + import.meta.env.VITE_API_KEY);
     const response = await fetch("https://api.petfinder.com/v2/oauth2/token", {
-        body: `grant_type=client_credentials&client_id=${process.env.REACT_APP_API_KEY}&client_secret=${process.env.REACT_APP_API_SECRET}`,
+        body: `grant_type=client_credentials&client_id=${import.meta.env.VITE_API_KEY}&client_secret=${import.meta.env.VITE_API_SECRET}`,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
@@ -18,7 +19,7 @@ export async function getBearerToken() {
     return  data["access_token"];
 }
 
-export async function search(type, size) {
+export async function search(type: any, size: any) {
   let bearerToken= localStorage.getItem("BearerToken");
     const response = await fetch(`https://api.petfinder.com/v2/animals?type=${type}&size=${size}`, {
         headers: {
